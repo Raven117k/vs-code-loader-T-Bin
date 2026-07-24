@@ -57,33 +57,49 @@ class TermuxEnvironment(private val context: Context) {
         return ready
     }
 
-    fun getEnvironment(): Map<String, String> = mapOf(
-        "HOME" to homeDir.absolutePath,
-        "PREFIX" to usrDir.absolutePath,
-        "PATH" to listOf(
-            localBinDir.absolutePath,
-            binDir.absolutePath,
-            File(usrDir, "usr/local/bin").absolutePath,
-            File(usrDir, "usr/bin").absolutePath,
-            nativeLibDir
-        ).joinToString(":"),
-        "LD_LIBRARY_PATH" to listOf(
-            File(usrDir, "lib").absolutePath,
-            File(usrDir, "usr/lib").absolutePath
-        ).joinToString(":"),
-        "TMPDIR" to tmpDir.absolutePath,
+    /**
+     * termux-exec provides several LD_PRELOAD shims that intercept execve() to
+     * rewrite hardcoded FHS paths (e.g. "#!/usr/bin/env node") to our real prefix.
+     * "direct" syscall hooking is preferred on newer Android but can be blocked by
+     * OEM SELinux/seccomp policy on some devices — fall back to the linker-based
+     * shim, then the generic default if neither exists.
+     */
+    private fun resolveLdPreloadLib(): File? {
+        val direct = File(usrDir, "lib/libtermux-exec-direct-ld-preload.so")
+        val linker = File(usrDir, "lib/libtermux-exec-linker-ld-preload.so")
+        val generic = File(usrDir, "lib/libtermux-exec-ld-preload.so")
+        return when {
+            android.os.Build.VERSION.SDK_INT >= 28 && direct.exists() -> direct
+            linker.exists() -> linker
+            generic.exists() -> generic
+            else -> null
+        }
+    }
 
-        // --- node-gyp / native npm module fixes for Termux-on-Android ---
-        // gyp's Android cross-compile code path expects android_ndk_path to be
-        // defined even though we're running natively, not cross-compiling.
-        "GYP_DEFINES" to "android_ndk_path=''",
-        // Forces npm to run install scripts with elevated dependency resolution,
-        // which resolves the common "nested native dep not found" (node-addon-api,
-        // etc.) failures seen on npm global installs in Termux environments.
-        "npm_config_unsafe_perm" to "true",
-        // Surfaces native build output directly instead of buffering it, so
-        // future native-module failures are easier to diagnose from your app's
-        // captured stdout rather than requiring a separate npm debug log.
-        "npm_config_foreground_scripts" to "true"
-    )
+    fun getEnvironment(): Map<String, String> {
+        val base = mutableMapOf(
+            "HOME" to homeDir.absolutePath,
+            "PREFIX" to usrDir.absolutePath,
+            "PATH" to listOf(
+                localBinDir.absolutePath,
+                binDir.absolutePath,
+                File(usrDir, "usr/local/bin").absolutePath,
+                File(usrDir, "usr/bin").absolutePath,
+                nativeLibDir
+            ).joinToString(":"),
+            "LD_LIBRARY_PATH" to listOf(
+                File(usrDir, "lib").absolutePath,
+                File(usrDir, "usr/lib").absolutePath
+            ).joinToString(":"),
+            "TMPDIR" to tmpDir.absolutePath,
+            "GYP_DEFINES" to "android_ndk_path=''",
+            "npm_config_foreground_scripts" to "true"
+        )
+
+        resolveLdPreloadLib()?.let { preloadLib ->
+            base["LD_PRELOAD"] = preloadLib.absolutePath
+        } ?: AppLogger.log("TermuxEnvironment", "No termux-exec LD_PRELOAD shim found — /usr/bin/env-style shebangs will fail")
+
+        return base
+    }
 }
