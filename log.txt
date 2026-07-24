@@ -1,0 +1,293 @@
+.../files/home $ $PREFIX
+bash: /data/user/0/com.aistudio.vscodeloader.hlab/files/usr: Is a directory
+.../files/home $ pwd
+/data/data/com.aistudio.vscodeloader.hlab/files/home
+.../files/home $ git -v
+git version 2.55.0
+.../files/home $ node -v
+v24.17.0
+.../files/home $ npm -v
+11.18.0
+.../files/home $ npx -v
+11.18.0
+.../files/home $ npm install -g code-server
+npm error code 126
+npm error path /data/data/com.aistudio.vscodeloader.hlab/files/usr/lib/node_modules/code-server/node_modules/argon2
+npm error command failed
+npm error command sh -c node-gyp rebuild
+npm error sh: 1: node-gyp: Permission denied
+npm notice
+npm notice New major version of npm available! 11.18.0 -> 12.0.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.0.1
+npm notice To update run: npm install -g npm@12.0.1
+npm notice
+npm error A complete log of this run can be found in: /data/user/0/com.aistudio.vscodeloader.hlab/files/home/.npm/_logs/2026-07-23T13_19_37_372Z-debug-0.log
+.../files/home $ npm install -g code-server --unsafe-perm
+npm warn Unknown cli config "--unsafe-perm". This will stop working in the next major version of npm.
+npm error code 126
+npm error path /data/data/com.aistudio.vscodeloader.hlab/files/usr/lib/node_modules/code-server/node_modules/argon2
+npm error command failed
+npm error command sh -c node-gyp rebuild
+npm error sh: 1: node-gyp: Permission denied
+npm error A complete log of this run can be found in: /data/user/0/com.aistudio.vscodeloader.hlab/files/home/.npm/_logs/2026-07-23T13_23_06_132Z-debug-0.log
+.../files/home $ mkdir -p $PREFIX/tmp
+.../files/home $ export TMPDIR=$PREFIX/tmp
+.../files/home $ npm install -g code-server
+npm error code 126
+npm error path /data/data/com.aistudio.vscodeloader.hlab/files/usr/lib/node_modules/code-server/node_modules/argon2
+npm error command failed
+npm error command sh -c node-gyp rebuild
+npm error sh: 1: node-gyp: Permission denied
+npm error A complete log of this run can be found in: /data/user/0/com.aistudio.vscodeloader.hlab/files/home/.npm/_logs/2026-07-23T13_24_19_841Z-debug-0.log
+.../files/home $ chmod -R +x $PREFIX/lib/node_modules/
+.../files/home $ chmod -R +x $PREFIX/bin/
+.../files/home $ export TMPDIR=$PREFIX/tmp
+.../files/home $ mkdir -p $TMPDIR
+.../files/home $ npm install -g code-server
+npm error code 1
+npm error path /data/data/com.aistudio.vscodeloader.hlab/files/usr/lib/node_modules/code-server/node_modules/argon2
+npm error command failed
+npm error command sh -c node-gyp rebuild
+npm error gyp info it worked if it ends with ok
+npm error gyp info using node-gyp@12.4.0
+npm error gyp info using node@24.17.0 | android | x64
+npm error gyp info find Python using Python version 3.14.6 found at "/data/user/0/com.aistudio.vscodeloader.hlab/files/usr/bin/python3"
+npm error gyp http GET https://nodejs.org/download/release/v24.17.0/node-v24.17.0-headers.tar.gz
+npm error gyp http 200 https://nodejs.org/download/release/v24.17.0/node-v24.17.0-headers.tar.gz
+npm error gyp http GET https://nodejs.org/download/release/v24.17.0/SHASUMS256.txt
+npm error gyp http 200 https://nodejs.org/download/release/v24.17.0/SHASUMS256.txt
+npm error gyp info spawn /data/user/0/com.aistudio.vscodeloader.hlab/files/usr/bin/python3
+npm error gyp info spawn args [
+npm error gyp info spawn args '/data/data/com.aistudio.vscodeloader.hlab/files/usr/lib/node_modules/npm/node_modules/node-gyp/gyp/gyp_main.py',
+npm error gyp info spawn args 'binding.gyp',
+npm error gyp info spawn args '-f',
+npm error gyp info spawn args 'make',
+npm error gyp info spawn args '-I',
+npm error gyp info spawn args '/data/data/com.aistudio.vscodeloader.hlab/files/usr/lib/node_modules/code-server/node_modules/argon2/build/config.gypi',
+npm error gyp info spawn args '-I',
+npm error gyp info spawn args '/data/data/com.aistudio.vscodeloader.hlab/files/usr/lib/node_modules/npm/node_modules/node-gyp/addon.gypi',
+npm error gyp info spawn args '-I',
+npm error gyp info spawn args '/data/user/0/com.aistudio.vscodeloader.hlab/files/home/.cache/node-gyp/24.17.0/include/node/common.gypi',
+npm error gyp info spawn args '-Dlibrary=shared_library',
+npm error gyp info spawn args '-Dvisibility=default',
+npm error gyp info spawn args '-Dnode_root_dir=/data/user/0/com.aistudio.vscodeloader.hlab/files/home/.cache/node-gyp/24.17.0',
+npm error gyp info spawn args '-Dnode_gyp_dir=/data/data/com.aistudio.vscodeloader.hlab/files/usr/lib/node_modules/npm/node_modules/node-gyp',
+npm error gyp info spawn args '-Dnode_lib_file=/data/user/0/com.aistudio.vscodeloader.hlab/files/home/.cache/node-gyp/24.17.0/<(target_arch)/node.lib',
+npm error gyp info spawn args '-Dmodule_root_dir=/data/data/com.aistudio.vscodeloader.hlab/files/usr/lib/node_modules/code-server/node_modules/argon2',
+npm error gyp info spawn args '-Dnode_engine=v8',
+npm error gyp info spawn args '--depth=.',
+npm error gyp info spawn args '--no-parallel',
+npm error gyp info spawn args '--generator-output',
+npm error gyp info spawn args 'build',
+npm error gyp info spawn args '-Goutput_dir=.'
+npm error gyp info spawn args ]
+npm error gyp: Undefined variable android_ndk_path in binding.gyp while trying to load binding.gyp
+npm error gyp ERR! configure error
+npm error gyp ERR! stack Error: `gyp` failed with exit code: 1
+npm error gyp ERR! stack at ChildProcess.<anonymous> (/data/data/com.aistudio.vscodeloader.hlab/files/usr/lib/node_modules/npm/node_modules/node-gyp/lib/configure.js:317:18)
+npm error gyp ERR! stack at ChildProcess.emit (node:events:509:28)
+npm error gyp ERR! stack at ChildProcess._handle.onexit (node:internal/child_process:295:12)
+npm error gyp ERR! System Linux 4.4.146
+npm error gyp ERR! command "/data/data/com.aistudio.vscodeloader.hlab/files/usr/bin/node" "/data/data/com.aistudio.vscodeloader.hlab/files/usr/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js" "rebuild"
+npm error gyp ERR! cwd /data/data/com.aistudio.vscodeloader.hlab/files/usr/lib/node_modules/code-server/node_modules/argon2
+npm error gyp ERR! node -v v24.17.0
+npm error gyp ERR! node-gyp -v v12.4.0
+npm error gyp ERR! $npm_package_name argon2
+npm error gyp ERR! $npm_package_version 0.28.4
+npm error gyp ERR! not ok
+npm error A complete log of this run can be found in: /data/user/0/com.aistudio.vscodeloader.hlab/files/home/.npm/_logs/2026-07-23T13_25_43_621Z-debug-0.log
+.../files/home $ mkdir -p ~/.gyp
+<variables': { 'android_ndk_path': '' } }" > ~/.gyp/include.gypi
+.../files/home $ export CC=clang
+.../files/home $ export CXX=clang++
+.../files/home $ export TMPDIR=$PREFIX/tmp .gypi
+.../files/home $ export TMPDIR=$PREFIX/tmp
+.../files/home $ npm install -g code-server
+npm error code 1
+npm error path /data/data/com.aistudio.vscodeloader.hlab/files/usr/lib/node_modules/code-server/node_modules/argon2
+npm error command failed
+npm error command sh -c node-gyp rebuild
+npm error Using overrides found in /data/user/0/com.aistudio.vscodeloader.hlab/files/home/.gyp/include.gypi
+npm error gyp info it worked if it ends with ok
+npm error gyp info using node-gyp@12.4.0
+npm error gyp info using node@24.17.0 | android | x64
+npm error gyp info find Python using Python version 3.14.6 found at "/data/user/0/com.aistudio.vscodeloader.hlab/files/usr/bin/python3"
+npm error gyp info spawn /data/user/0/com.aistudio.vscodeloader.hlab/files/usr/bin/python3
+npm error gyp info spawn args [
+npm error gyp info spawn args '/data/data/com.aistudio.vscodeloader.hlab/files/usr/lib/node_modules/npm/node_modules/node-gyp/gyp/gyp_main.py',
+npm error gyp info spawn args 'binding.gyp',
+npm error gyp info spawn args '-f',
+npm error gyp info spawn args 'make',
+npm error gyp info spawn args '-I',
+npm error gyp info spawn args '/data/data/com.aistudio.vscodeloader.hlab/files/usr/lib/node_modules/code-server/node_modules/argon2/build/config.gypi',
+npm error gyp info spawn args '-I',
+npm error gyp info spawn args '/data/data/com.aistudio.vscodeloader.hlab/files/usr/lib/node_modules/npm/node_modules/node-gyp/addon.gypi',
+npm error gyp info spawn args '-I',
+npm error gyp info spawn args '/data/user/0/com.aistudio.vscodeloader.hlab/files/home/.cache/node-gyp/24.17.0/include/node/common.gypi',
+npm error gyp info spawn args '-Dlibrary=shared_library',
+npm error gyp info spawn args '-Dvisibility=default',
+npm error gyp info spawn args '-Dnode_root_dir=/data/user/0/com.aistudio.vscodeloader.hlab/files/home/.cache/node-gyp/24.17.0',
+npm error gyp info spawn args '-Dnode_gyp_dir=/data/data/com.aistudio.vscodeloader.hlab/files/usr/lib/node_modules/npm/node_modules/node-gyp',
+npm error gyp info spawn args '-Dnode_lib_file=/data/user/0/com.aistudio.vscodeloader.hlab/files/home/.cache/node-gyp/24.17.0/<(target_arch)/node.lib',
+npm error gyp info spawn args '-Dmodule_root_dir=/data/data/com.aistudio.vscodeloader.hlab/files/usr/lib/node_modules/code-server/node_modules/argon2',
+npm error gyp info spawn args '-Dnode_engine=v8',
+npm error gyp info spawn args '--depth=.',
+npm error gyp info spawn args '--no-parallel',
+npm error gyp info spawn args '--generator-output',
+npm error gyp info spawn args 'build',
+npm error gyp info spawn args '-Goutput_dir=.'
+npm error gyp info spawn args ]
+npm error Traceback (most recent call last):
+npm error   File "/data/data/com.aistudio.vscodeloader.hlab/files/usr/lib/node_modules/npm/node_modules/node-gyp/gyp/gyp_main.py", line 45, in <module>
+npm error     sys.exit(gyp.script_main())
+npm error              ~~~~~~~~~~~~~~~^^
+npm error   File "/data/data/com.aistudio.vscodeloader.hlab/files/usr/lib/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/__init__.py", line 702, in script_main
+npm error     return main(sys.argv[1:])
+npm error   File "/data/data/com.aistudio.vscodeloader.hlab/files/usr/lib/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/__init__.py", line 694, in main
+npm error     return gyp_main(args)
+npm error   File "/data/data/com.aistudio.vscodeloader.hlab/files/usr/lib/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/__init__.py", line 661, in gyp_main
+npm error     [generator, flat_list, targets, data] = Load(
+npm error                                             ~~~~^
+npm error         build_files,
+npm error         ^^^^^^^^^^^^
+npm error     ...<6 lines>...
+npm error         options.circular_check,
+npm error         ^^^^^^^^^^^^^^^^^^^^^^^
+npm error     )
+npm error     ^
+npm error   File "/data/data/com.aistudio.vscodeloader.hlab/files/usr/lib/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/__init__.py", line 141, in Load
+npm error     generator.CalculateVariables(default_variables, params)
+npm error     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+npm error   File "/data/data/com.aistudio.vscodeloader.hlab/files/usr/lib/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/generator/make.py", line 68, in CalculateVariables
+npm error     flavor = gyp.common.GetFlavor(params)
+npm error   File "/data/data/com.aistudio.vscodeloader.hlab/files/usr/lib/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/common.py", line 517, in GetFlavor
+npm error     defines = GetCompilerPredefines()
+npm error   File "/data/data/com.aistudio.vscodeloader.hlab/files/usr/lib/node_modules/npm/node_modules/node-gyp/gyp/pylib/gyp/common.py", line 465, in GetCompilerPredefines
+npm error     stdout = subprocess.run(
+npm error              ~~~~~~~~~~~~~~^
+npm error         real_cmd, shell=False, capture_output=True, check=True
+npm error         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+npm error     ).stdout
+npm error     ^
+npm error   File "/data/user/0/com.aistudio.vscodeloader.hlab/files/usr/lib/python3.14/subprocess.py", line 555, in run
+npm error     with Popen(*popenargs, **kwargs) as process:
+npm error          ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+npm error   File "/data/user/0/com.aistudio.vscodeloader.hlab/files/usr/lib/python3.14/subprocess.py", line 1039, in __init__
+npm error     self._execute_child(args, executable, preexec_fn, close_fds,
+npm error     ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+npm error                         pass_fds, cwd, env,
+npm error                         ^^^^^^^^^^^^^^^^^^^
+npm error     ...<5 lines>...
+npm error                         gid, gids, uid, umask,
+npm error                         ^^^^^^^^^^^^^^^^^^^^^^
+npm error                         start_new_session, process_group)
+npm error                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+npm error   File "/data/user/0/com.aistudio.vscodeloader.hlab/files/usr/lib/python3.14/subprocess.py", line 1988, in _execute_child
+npm error     raise child_exception_type(errno_num, err_msg, err_filename)
+npm error FileNotFoundError: [Errno 2] No such file or directory: 'clang'
+npm error gyp ERR! configure error
+npm error gyp ERR! stack Error: `gyp` failed with exit code: 1
+npm error gyp ERR! stack at ChildProcess.<anonymous> (/data/data/com.aistudio.vscodeloader.hlab/files/usr/lib/node_modules/npm/node_modules/node-gyp/lib/configure.js:317:18)
+npm error gyp ERR! stack at ChildProcess.emit (node:events:509:28)
+npm error gyp ERR! stack at ChildProcess._handle.onexit (node:internal/child_process:295:12)
+npm error gyp ERR! System Linux 4.4.146
+npm error gyp ERR! command "/data/data/com.aistudio.vscodeloader.hlab/files/usr/bin/node" "/data/data/com.aistudio.vscodeloader.hlab/files/usr/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js" "rebuild"
+npm error gyp ERR! cwd /data/data/com.aistudio.vscodeloader.hlab/files/usr/lib/node_modules/code-server/node_modules/argon2
+npm error gyp ERR! node -v v24.17.0
+npm error gyp ERR! node-gyp -v v12.4.0
+npm error gyp ERR! $npm_package_name argon2
+npm error gyp ERR! $npm_package_version 0.28.4
+npm error gyp ERR! not ok
+npm error A complete log of this run can be found in: /data/user/0/com.aistudio.vscodeloader.hlab/files/home/.npm/_logs/2026-07-23T13_33_42_623Z-debug-0.log
+.../files/home $ pkg install clang make
+No mirror or mirror group selected. You might want to select one by running 'termux-change-repo'
+Testing the available mirrors:
+[*] (10) https://packages-cf.termux.dev/apt/termux-main: ok
+[*] (1) https://mirrors.ravidwivedi.in/termux/termux-main: ok
+[*] (1) https://mirrors.krnk.org/apt/termux/termux-main: ok
+[*] (1) https://termux.niranjan.co/termux-main: ok
+[*] (1) https://mirror.albony.in/termux/termux-main: ok
+[*] (1) https://mirrors.nguyenhoang.cloud/termux/termux-main: ok
+[*] (1) https://mirror.meowsmp.net/termux/termux-main: bad
+[*] (1) https://linux.domainesia.com/applications/termux/termux-main: ok
+[*] (1) https://mirror.nevacloud.com/applications/termux/termux-main: bad
+[*] (1) https://mirror.freedif.org/termux/termux-main: ok
+[*] (1) https://mirror.bardia.tech/termux/termux-main: bad
+[*] (1) https://mirror.rinarin.dev/termux/termux-main: ok
+[*] (1) https://tmx.xvx.my.id/apt/termux-main: ok
+[*] (1) https://mirror.jeonnam.school/termux/termux-main: ok
+[*] (1) https://mirror.textcord.xyz/termux/termux-main: bad
+[*] (1) https://mirrors.saswata.cc/termux/termux-main: bad
+[*] (1) https://mirrors.cbrx.io/apt/termux/termux-main: ok
+[*] (1) https://mirrors.in.sahilister.net/termux/termux-main/: ok
+[*] (1) https://mirror.twds.com.tw/termux/termux-main: ok
+[*] (1) https://mirror.nyist.edu.cn/termux/apt/termux-main: ok
+[*] (1) https://mirrors.sau.edu.cn/termux/apt/termux-main: ok
+[*] (1) https://mirror.sjtu.edu.cn/termux/termux-main/: ok
+[*] (1) https://mirrors.bfsu.edu.cn/termux/apt/termux-main: ok
+[*] (1) https://mirrors.cernet.edu.cn/termux/apt/termux-main: ok
+[*] (1) https://mirrors.sdu.edu.cn/termux/termux-main: ok
+[*] (1) https://mirrors.nju.edu.cn/termux/apt/termux-main: ok
+[*] (1) https://mirrors.zju.edu.cn/termux/apt/termux-main: ok
+[*] (1) https://mirrors.pku.edu.cn/termux/termux-main/: ok
+[*] (1) https://mirrors.aliyun.com/termux/termux-main: ok
+[*] (1) https://mirrors.hust.edu.cn/termux/apt/termux-main: ok
+[*] (1) https://mirrors.cqupt.edu.cn/termux/termux-main: ok
+[*] (1) https://mirrors.ustc.edu.cn/termux/termux-main: ok
+[*] (1) https://mirrors.sustech.edu.cn/termux/apt/termux-main: ok
+[*] (1) https://mirror.iscas.ac.cn/termux/apt/termux-main: bad
+[*] (1) https://mirrors.tuna.tsinghua.edu.cn/termux/apt/termux-main: ok
+[*] (1) https://packages.termux.dev/apt/termux-main: ok
+[*] (1) https://ro.mirror.flokinet.net/termux/termux-main: ok
+[*] (4) https://grimler.se/termux/termux-main: ok
+[*] (1) https://mirror.termux.dev/termux-main: bad
+[*] (1) https://termux.cdn.lumito.net/termux-main: ok
+[*] (1) https://nl.mirror.flokinet.net/termux/termux-main: ok
+[*] (1) https://termux.3san.dev/termux/termux-main: ok
+[*] (1) https://mirror.accum.se/mirror/termux.dev/termux-main: ok
+[*] (1) https://termux.mentality.rip/termux-main: bad
+[*] (1) https://mirrors.de.sahilister.net/termux/termux-main: ok
+[*] (1) https://md.mirrors.hacktegic.com/termux/termux-main: bad
+[*] (1) https://mirror.autkin.net/termux/termux-main: ok
+[*] (1) https://mirror.sunred.org/termux/termux-main: ok
+[*] (1) https://ftp.agdsn.de/termux/termux-main: ok
+[*] (1) https://mirrors.medzik.dev/termux/termux-main: bad
+[*] (1) https://mirror.leitecastro.com/termux/termux-main: bad
+[*] (1) https://mirror.bouwhuis.network/termux/termux-main: ok
+[*] (1) https://ftp.fau.de/termux/termux-main: ok
+[*] (1) https://mirror.mwt.me/termux/main: ok
+[*] (1) https://mirrors.cfe.re/termux/termux-main: bad
+[*] (1) https://termux.librehat.com/apt/termux-main: ok
+[*] (1) https://mirror.polido.pt/termux/termux-main: bad
+[*] (1) https://is.mirror.flokinet.net/termux/termux-main: ok
+[*] (1) https://gnlug.org/pub/termux/termux-main: bad
+[*] (1) https://termux.danyael.xyz/termux/termux-main: ok
+[*] (1) https://mirror.fcix.net/termux/termux-main: ok
+[*] (1) https://mirror.mwt.me/termux/main: ok
+[*] (1) https://mirror.quantum5.ca/termux/termux-main: ok
+[*] (1) https://mirror.vern.cc/termux/termux-main: ok
+[*] (1) https://mirrors.utermux.dev/termux/termux-main: ok
+[*] (1) https://plug-mirror.rcac.purdue.edu/termux/termux-main: ok
+[*] (1) https://dl.kcubeterm.com/termux-main: bad
+[*] (1) https://mirror.csclub.uwaterloo.ca/termux/termux-main: ok
+[*] (1) https://mirrors.middlendian.com/termux/termux-main: ok
+[*] (1) http://mirror.mephi.ru/termux/termux-main: ok
+[*] (1) https://repository.su/termux/termux-main/: ok
+Picking mirror: (22) /data/user/0/com.aistudio.vscodeloader.hlab/files/usr/etc/termux/mirrors/asia/mirror.twds.com.tw
+Get:1 https://mirror.twds.com.tw/termux/termux-main stable InRelease [14.0 kB]
+Get:2 https://mirror.twds.com.tw/termux/termux-main stable/main x86_64 Packages [560 kB]
+Fetched 574 kB in 4s (150 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+59 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Reading package lists... Done
+Building dependency tree... Done
+You might want to run 'apt --fix-broken install' to correct these.
+The following packages have unmet dependencies:
+ clang : Depends: libcompiler-rt but it is not going to be installed
+         Depends: lld but it is not going to be installed
+         Depends: llvm but it is not going to be installed
+         Depends: ndk-sysroot but it is not going to be installed
+         Depends: libllvm (= 21.1.8-3) but it is not going to be installed
+E: Unmet dependencies. Try 'apt --fix-broken install' with no packages (or specify a solution).
+.../files/home $
