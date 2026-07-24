@@ -36,7 +36,6 @@ class TermuxEnvironment(private val context: Context) {
             File(usrDir, "usr/bin/$name"),
             File(usrDir, "usr/local/bin/$name")
         )
-
         return candidates.firstOrNull { it.exists() } ?: File(binDir, name)
     }
 
@@ -72,6 +71,19 @@ class TermuxEnvironment(private val context: Context) {
             File(usrDir, "lib").absolutePath,
             File(usrDir, "usr/lib").absolutePath
         ).joinToString(":"),
-        "TMPDIR" to tmpDir.absolutePath
+        "TMPDIR" to tmpDir.absolutePath,
+
+        // --- node-gyp / native npm module fixes for Termux-on-Android ---
+        // gyp's Android cross-compile code path expects android_ndk_path to be
+        // defined even though we're running natively, not cross-compiling.
+        "GYP_DEFINES" to "android_ndk_path=''",
+        // Forces npm to run install scripts with elevated dependency resolution,
+        // which resolves the common "nested native dep not found" (node-addon-api,
+        // etc.) failures seen on npm global installs in Termux environments.
+        "npm_config_unsafe_perm" to "true",
+        // Surfaces native build output directly instead of buffering it, so
+        // future native-module failures are easier to diagnose from your app's
+        // captured stdout rather than requiring a separate npm debug log.
+        "npm_config_foreground_scripts" to "true"
     )
 }
